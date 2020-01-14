@@ -1,4 +1,5 @@
 require "yaml"
+require 'pry'
 def load_library(file_path)
   nds = YAML.load_file(file_path)
   new_nds = {}
@@ -12,12 +13,9 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoticon)
-  results = load_library(file_path)
-  results['get_emoticon'].each do |english_emote, japanese_emote|
-    if emoticon == english_emote
-      return japanese_emote
-    end
-  end
+  binding.pry
+  results = load_library(file_path)['get_emoticon']
+  
 end
 
 def get_english_meaning
