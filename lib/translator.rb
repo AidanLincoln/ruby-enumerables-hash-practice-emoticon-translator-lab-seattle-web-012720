@@ -12,8 +12,8 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoticon)
-  load_library(file_path)
-  new_nds['get_emoticon'].each do |english_emote, japanese_emote|
+  results = load_library(file_path)
+  results['get_emoticon'].each do |english_emote, japanese_emote|
     if emoticon == english_emote
       return japanese_emote
     end
