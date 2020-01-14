@@ -13,7 +13,6 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoticon)
-  binding.pry
   results = load_library(file_path)['get_emoticon'][emoticon]
   if results
     return results
