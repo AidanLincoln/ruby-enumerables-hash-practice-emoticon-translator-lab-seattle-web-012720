@@ -8,7 +8,7 @@ def load_library(file_path)
     new_nds['get_meaning'][array[1]] = meaning
     new_nds['get_emoticon'][array[0]] = array[1]
   end
-  
+  new_nds
 end
 
 def get_japanese_emoticon(file_path, emoticon)
